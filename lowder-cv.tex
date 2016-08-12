@@ -1,0 +1,291 @@
+\documentclass[10pt]{article}
+
+\usepackage{calc}
+
+\reversemarginpar
+
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=0.75in,               % 1 inch margins
+            includemp]{geometry}
+
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+\setlength{\parindent}{0in}
+
+\usepackage{paralist}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Remove page numbering
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+\usepackage{color,hyperref}
+\definecolor{black}{rgb}{0.0,0.0,0.0}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=black,urlcolor=black,
+            anchorcolor=black,citecolor=black}
+
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+                {\large \bfseries #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+\renewcommand{\section}[2]%
+        {\pagebreak[2]\vspace{1.3\baselineskip}%
+         \phantomsection\addcontentsline{toc}{section}{#1}%
+         \hspace{0in}%
+         \marginpar{
+         \raggedright \scshape #1}#2}
+
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{enumerate}[#1]}{\end{enumerate}%
+         \vspace{-.6\baselineskip}}
+
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{compactenum}[#1]}{\end{compactenum}}
+
+\newcommand{\blankline}{\quad\pagebreak[2]}
+
+\begin{document}
+\makeheading{Chris Lowder}
+
+\section{Contact Information}
+\newlength{\rcollength}\setlength{\rcollength}{3.0in}%
+%
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+\href{https://www.maths.dur.ac.uk}{Department of Mathematical Sciences}
+			  & \textit{Office:} ~+44 (0) 191 3343087\\
+\href{https://www.dur.ac.uk}{Durham University}
+                           & \textit{Mobile:} +44 (0) 7497 356988 \\
+Durham DH1 3LE, United Kingdom     & \textit{E-mail:} \href{mailto:chris.lowder@durham.ac.uk}{chris.lowder@durham.ac.uk}
+\end{tabular}
+
+\section{Education}
+\href{http://www.montana.edu/}{\textbf{Montana State University}},
+Bozeman, Montana, United States
+\begin{outerlist}
+\item[] PhD
+	\href{http://www.physics.montana.edu/}
+	     {Physics}, June 2015
+	     %GPA : 3.95 / 4.00\\
+\item[] M.S.
+	\href{http://www.physics.montana.edu/}
+	     {Physics}, May 2011\\
+\end{outerlist}
+
+\href{http://www.gatech.edu/}{\textbf{Georgia Institute of Technology}}, 
+Atlanta, Georgia, United States
+\begin{outerlist}
+\item[] B.S., 
+        \href{http://www.physics.gatech.edu/}
+             {Physics}, December 2007
+	     %GPA : 3.84 / 4.00        
+\end{outerlist}
+
+\section{Publications}
+\hangindent=0.2cm \href{http://adsabs.harvard.edu/abs/2014ApJ...783..142L}{Lowder, C., Qiu, J., Leamon, R. \& Liu, Y. \textit{Measurements of EUV Coronal Holes and Open Magnetic Flux.} ApJ 783, 142 (2014).}
+
+\hangindent=0.4cm Lowder, C., Qiu, J., Leamon, R., \& Longcope, D.  \textit{Connecting Coronal Holes and Open Magnetic Field via Numerical Modeling and Observations}. (in preparation).
+
+\hangindent=0.4cm Lowder, C., Qiu, J., \& Leamon, R., \textit{Transient Coronal Dimmings and connection to Heliospheric Open Flux}. (in preparation).
+
+\hangindent=0.4cm Lowder, C., Yeates, A., \textit{Magnetic Flux Rope Identification and Characterization from Observationally-Driven Solar Coronal Models}. (in preparation).
+
+\section{Presentations}
+\hangindent=0.4cm \textit{A Comparison of EUV Coronal Hole Measurements and Modeled Open Magnetic Field -or- How I learned to stop worrying and love the potential magnetic field.} GSU Colloquium Series (2014).
+
+\hangindent=0.4cm \textit{Full Surface Automated Coronal Hole Detection and Characterization to Constrain Global Magnetic Field Models}. AAS Meeting 220 (2012).
+
+\hangindent=0.4cm \textit{Transient coronal holes : A statistical study of coronal dimming regions}. The Origin, Evolution, and Diagnosis of Solar Flare Magnetic Fields and Plasmas (2010).
+
+\hangindent=0.4cm \textit{Coronal Mass Ejections : A Study of Structural Evolution and Classification}. AAS Meeting 210 (2007).
+
+\section{Languages}
+Python, IDL, C++, Fortran, Octave, \LaTeX{}
+
+%\href{http://www.georgiasouthern.edu/}{\textbf{Georgia Southern University}}, 
+%Statesboro, Georgia, United States
+%\begin{outerlist}
+
+%\item[] Post-Secondary Options Student / Joint Enrollment
+%        \begin{innerlist}
+%        \item GPA : 4.00 / 4.00
+%        \end{innerlist}
+        
+%\end{outerlist}
+
+\section{Research Experience}
+\href{}{\textbf{University of Durham}}, 
+Durham, England, United Kingdom\\
+\href{}{\textbf{Department of Mathematical Sciences}}
+\begin{outerlist}
+\item[] \textit{Research Associate in Solar Magnetohydrodynamics}%
+        \hfill \textbf{September 2015 to Present}
+\begin{innerlist}
+  \item Item
+  \\
+\end{innerlist}
+
+\end{outerlist}
+
+
+\href{http://www.montana.edu}{\textbf{Montana State University}}, 
+Bozeman, Montana, United States\\
+\href{http://www.physics.montana.edu}{\textbf{School of Physics}}
+\begin{outerlist}
+\item[] \textit{Graduate Research Assistant}%
+        \hfill \textbf{August 2009 to August 2015}
+\begin{innerlist}
+  \item Worked with Dr. Jiong Qiu and Dr. Robert Leamon in analyzing coronal dimming
+  \item Applied this data analysis for space weather predictive applications
+  \item Designed automated code to detect and characterize coronal holes from SDO/STEREO EUV data to constrain global models of open magnetic field
+  \\
+\end{innerlist}
+
+\end{outerlist}
+
+\href{http://solar.physics.montana.edu/}{\textbf{Montana State University}}, 
+Bozeman, Montana, United States\\
+\href{http://solar.physics.montana.edu/}{\textbf{Solar Physics Group}}
+\begin{outerlist}
+\item[] \textit{NSF Summer REU Undergraduate Researcher}%
+        \hfill \textbf{June 2007 to August 2007}
+\begin{innerlist}
+
+  \item Improved methods to resolve the 180-degree ambiguity in solar vector \mbox{magnetograms}
+  \item Attempted to apply method to high resolution Hinode magnetograms
+  \\
+\end{innerlist}
+
+\end{outerlist}
+
+
+\href{http://www.ifa.hawaii.edu/}{\textbf{University of Hawai'i}}, 
+Honolulu, Hawai'i United States\\
+\href{http://www.ifa.hawaii.edu/}{\textbf{Institute for Astronomy}}
+\begin{outerlist}
+\item[] \textit{NSF Summer REU Undergraduate Researcher}%
+        \hfill \textbf{May 2006 to August 2006}
+\begin{innerlist}
+  \item Analysis of CMEs utilizing SOHO data for Dr. Shadia Habbal and Dr. Huw Morgan
+  \item Observational experience and interaction with astronomers at Mauna Kea \mbox{observatories} on the IRTF, Caltech CSO, and the UH 88'' \\
+\end{innerlist}
+
+\end{outerlist}
+
+\section{Teaching Experience}
+\href{http://www.gatech.edu}{\textbf{Georgia Institute of Technology}}, 
+Atlanta, Georgia, United States\\
+\href{http://www.physics.gatech.edu}{\textbf{School of Physics}}
+\begin{outerlist}
+\item[] \textit{Graduate Teaching Assistant}%
+        \hfill \textbf{August 2008 to May 2009}
+\begin{innerlist}
+
+  \item Engaged students in problem solving methods not directly addressed in lecture
+  \\
+\end{innerlist}
+
+\end{outerlist}
+
+\href{http://georgiasouthern.edu/physics/}{\textbf{Georgia Southern University}}, 
+Statesboro, Georgia, United States\\
+\href{http://georgiasouthern.edu/physics/}{\textbf{Department of Physics}}
+
+\begin{outerlist}
+\item[] \textit{Physics I / II Lab Teaching Assistant}%
+        \hfill \textbf{May 2008 to July 2008}
+\begin{innerlist}
+  \item Maintained lab equipment and helped to integrate the lecture and lab experience
+  \item Graded work assignments and assisted with in-class assignments
+\end{innerlist}
+
+\end{outerlist}
+
+
+\begin{outerlist}
+\item[] \textit{Astronomy Laboratory Instructor}%
+        \hfill \textbf{January 2008 to May 2008}
+\begin{innerlist}
+  \item Engaged students in aspects of theory and observations in astronomy
+  \item Modernized course content and implemented new observational activities
+\end{innerlist}
+
+\end{outerlist}
+
+\begin{outerlist}
+\item[] \textit{Planetarium Lecturer}%
+        \hfill \textbf{January 2008 to May 2008}
+\begin{innerlist}
+  \item Provided free planetarium shows to grade school level groups
+  \item Organized workshop sessions to train grade-school earth science teachers
+  \\
+\end{innerlist}
+
+\end{outerlist}
+
+\href{http://www.physics.gatech.edu/}{\textbf{Georgia Institute of Technology}}, 
+Atlanta, Georgia, United States\\
+\href{http://www.physics.gatech.edu/}{\textbf{School of Physics}}
+\begin{outerlist}
+\item[] \textit{Physics II Laboratory Teaching Assistant}%
+        \hfill \textbf{September 2007 to December 2007}
+\begin{innerlist}
+  \item Setup and conducted a physics II lab session
+  \item Instructed students and graded the resulting labwork
+  \\
+\end{innerlist}
+
+\end{outerlist}
+
+\section{Awards}
+LWS Heliophysics Summer School Participant
+
+National Merit Scholar
+
+Georgia Governor's Scholar
+
+%\href{http://www.gatech.edu}{Georgia Institute of Technology}
+%\begin{innerlist}
+%\item Faculty Honors (Semester GPA of 4.0), Fall 2004, Spring and Fall 2006
+%\item Dean's List (Semester GPA of 3.0), Spring and Fall 2005
+%\end{innerlist}
+
+\section{Outreach}
+\hangindent=0.4cm Peaks and Potentials - Taught summer student workshop series on solar physics
+
+MSU Astronomy Day - Organized solar physics exhibit
+
+Science Olympiad - Designed state astronomy event
+
+Georgia Southern Planetarium - Created and presented planetarium show content
+
+\href{http://astronomyclub.gatech.edu/}{Georgia Tech Astronomy Club} - President
+
+
+\end{document}
