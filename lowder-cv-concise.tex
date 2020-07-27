@@ -4,7 +4,7 @@
 
 \reversemarginpar
 
-\usepackage[paper=a4paper,
+\usepackage[paper=letterpaper,
             %includefoot, % Uncomment to put page number above margin
             marginparwidth=1.2in,     % Length of section titles
             marginparsep=.05in,       % Space between titles and text
@@ -74,16 +74,16 @@
 \begin{document}
 \makeheading{Chris Lowder}
 
-\section{Contact}
-\newlength{\rcollength}\setlength{\rcollength}{3.0in}%
+\pagestyle{empty}
+
+%\section{Contact}
+%\newlength{\rcollength}\setlength{\rcollength}{3.0in}%
 %
-\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
-\href{https://www.dur.ac.uk/mathematical.sciences/}{Mathematical Sciences}
-                           & \textit{Mobile:} +44 (0) 7497 356988\\
-\href{https://www.dur.ac.uk}{Durham University}
-                           & \textit{Office:} ~+44 (0) 191 334 3087\\
-Durham, DH1 3LE, United Kingdom    & \textit{E-mail:} \href{mailto:chris.lowder@durham.ac.uk}{chris.lowder@durham.ac.uk}
-\end{tabular}
+%\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+%Southwest Research Institute		& \textit{Office: } +1 303 546 %9670\\
+%1050 Walnut Street				& \textit{Mobile:} +1 720 808 %2847\\
+%Boulder, Colorado 80302, United States    & \textit{E-mail:} \href{mailto:lowder@boulder.swri.edu}{lowder@boulder.swri.edu}
+%\end{tabular}
 
 \section{Education}
 \href{http://www.montana.edu/}{\textbf{Montana State University}},
@@ -108,36 +108,23 @@ Atlanta, Georgia, United States
 	     %GPA : 3.84 / 4.00        
 \end{outerlist}
 
-\section{Publications}
-\hangindent=0.2cm \href{http://adsabs.harvard.edu/abs/2014ApJ...783..142L}{Lowder, C., Qiu, J., Leamon, R. \& Liu, Y. \textit{Measurements of EUV Coronal Holes and Open Magnetic Flux.} ApJ 783, 142 (2014).}
+\section{Selected\\ Publications}
+\hangindent=0.2cm Lowder, C., \textit{The Coronal Hole Observer and Regional Tracker for Long-term Examination}. (in preparation).
 
-\hangindent=0.4cm Lowder, C., Qiu, J., \& Leamon, R. \textit{Coronal Holes and Open Magnetic Flux over Cycles 23 and 24}. (accepted)
+\hangindent=0.4cm Lowder, C., Lamb, D., \& DeForest, C., \textit{Fluxon Modeling of the Steady Solar Wind}. (in preparation).
 
-\hangindent=0.4cm Lowder, C., Qiu, J., Leamon, R., \& Longcope, D.  \textit{Connecting Coronal Holes and Open Magnetic Field}. (in preparation).
+\hangindent=0.4cm Lowder, C., Yeates, A., \textit{Magnetic Flux Rope Identification and Characterization from\break Observationally-Driven Solar Coronal Models}. ApJ, 846, 106 (2017).
 
-\hangindent=0.4cm Lowder, C., Qiu, J., \& Leamon, R., \textit{Transient Coronal Dimmings and connection to Heliospheric Open Flux}. (in preparation).
+\hangindent=0.4cm \href{http://adsabs.harvard.edu/abs/2017SoPh..292...18L}{Lowder, C., Qiu, J., \& Leamon, R. \textit{Coronal Holes and Open Magnetic Flux over Cycles 23 and 24.} SoPh 292, 18 (2017).}
 
-\hangindent=0.4cm Lowder, C., Yeates, A., \textit{Magnetic Flux Rope Identification and Characterization from\break Observationally-Driven Solar Coronal Models}. (in preparation).
-
-\section{Conference Proceedings}
-\hangindent=0.4cm \textit{Magnetic Flux Rope Identification and Characterization from Observationally-Driven Solar Coronal Models} UK National Astronomy Meeting (2016).
-
-\hangindent=0.4cm \textit{Connecting Coronal Holes and Open Magnetic Field via Numerical Modeling and Observations.} Triennial Earth-Sun Summit  / SPD (2015).
-
-\hangindent=0.4cm \textit{A Comparison of EUV Coronal Hole Measurements and Modeled Open Magnetic Field -or- How I learned to stop worrying and love the potential magnetic field.} GSU Colloquium Series (2014).
-
-\hangindent=0.4cm \textit{Full Surface Automated Coronal Hole Detection and Characterization to Constrain Global Magnetic Field Models}. AAS Meeting 220 (2012).
-
-\hangindent=0.4cm \textit{Transient coronal holes : A statistical study of coronal dimming regions}. The Origin, Evolution, and Diagnosis of Solar Flare Magnetic Fields and Plasmas (2010).
-
-\hangindent=0.4cm \textit{Coronal Mass Ejections : A Study of Structural Evolution and Classification}. AAS Meeting 210 (2007).
+\hangindent=0.4cm \href{http://adsabs.harvard.edu/abs/2014ApJ...783..142L}{Lowder, C., Qiu, J., Leamon, R. \& Liu, Y. \textit{Measurements of EUV Coronal Holes and Open Magnetic Flux.} ApJ 783, 142 (2014).}
 
 \section{Computing}
-\textit{Proficient} : Python, IDL, \LaTeX, OpenMPI, Fortran
+\textit{Proficient} : Python (NumPy, SciPy, SunPy), Perl (PDL), MayaVi / VTK, Blender, IDL, SolarSoft, \LaTeX, OpenMPI, Fortran, Git/GitHub
 
-\textit{Familiar} : C++, Octave, MATLAB, OpenCL
+\textit{Familiar} : C, C++, Octave, MATLAB, OpenCL, VisIt, Glue, Pandas
 
-Experience in large-scale parallel computing projects and databases
+Experience in parallel high performance computing projects and large-scale datasets
 
 %\href{http://www.georgiasouthern.edu/}{\textbf{Georgia Southern University}}, 
 %Statesboro, Georgia, United States
@@ -151,23 +138,39 @@ Experience in large-scale parallel computing projects and databases
 %\end{outerlist}
 
 \section{Research Experience}
-\href{https://www.dur.ac.uk}{\textbf{Durham University}}, 
-Durham, United Kingdom\\
-\href{https://www.dur.ac.uk/mathematical.sciences/}{\textbf{Department of Mathematical Sciences}}
+\href{https://www.swri.org}{\textbf{Southwest Research Institute}}\\
+\href{http://www.boulder.swri.edu}{\textbf{Planetary Science Directorate\\ Department of Space Studies}}
+\hfill Boulder, Colorado, United States
 \begin{outerlist}
-\item[] \textit{Postdoctoral Research Associate}%
-        \hfill \textbf{August 2015 to Present}
+\item[] \textit{Research Scientist}%
+        \hfill \textbf{December 2017 to Present}
 \begin{innerlist}
-  \item Working with \href{http://www.maths.dur.ac.uk/~bmjg46/}{Anthony Yeates} on modelling solar flux rope eruption and detection.
+  \item Working with \href{http://www.boulder.swri.edu/~deforest/}{Craig DeForest} and \href{http://www.boulder.swri.edu/~derek/}{Derek Lamb} on Fluxon MHD modeling of the solar corona.
+  \item Assisting with integration of codes through the Fluxon Rapid Assimilative Nowcaster (FRAN).
   \\
 \end{innerlist}
 
 \end{outerlist}
 
+\href{https://www.dur.ac.uk}{\textbf{Durham University}}\\
+\href{https://www.dur.ac.uk/mathematical.sciences/}{\textbf{Department of Mathematical Sciences}}
+\hfill Durham, United Kingdom
+\begin{outerlist}
+\item[] \textit{Postdoctoral Research Associate}%
+        \hfill \textbf{August 2015 to September 2017}
+\begin{innerlist}
+  \item Working with \href{http://www.maths.dur.ac.uk/~bmjg46/}{Anthony Yeates} on modeling solar flux rope eruption.
+  \item Developed the \href{https://github.com/lowderchris/FRoDO}{Flux Rope Detection and Observation (FRoDO)} code for automated tracking of magnetic flux ropes.
+  \item Utilized global non-potential models of the solar magnetic field, to identify and characterize magnetic flux ropes throughout the span of the solar activity cycle.
+  \item Developed software routines for managing and visualizing large datasets.
+  \\
+\end{innerlist}
 
-\href{http://www.montana.edu}{\textbf{Montana State University}}, 
-Bozeman, Montana, United States\\
+\end{outerlist}
+
+\href{http://www.montana.edu}{\textbf{Montana State University}}\\
 \href{http://www.physics.montana.edu}{\textbf{School of Physics}}
+\hfill Bozeman, Montana, United States
 \begin{outerlist}
 \item[] \textit{Graduate Research Assistant}%
         \hfill \textbf{August 2009 to August 2015}
@@ -175,38 +178,91 @@ Bozeman, Montana, United States\\
   \item Worked with \href{http://solar.physics.montana.edu/qiuj/}{Dr. Jiong Qiu} and \href{http://solar.physics.montana.edu/leamon/}{Dr. Robert Leamon} in analyzing coronal dimming
   \item Designed automated code to detect and characterize coronal holes from SDO and STEREO EUV data to constrain global models of open magnetic field
   \item Developed flux transport model to study evolution of far-side open magnetic field
+  \item Designed and supervised two projects for undergraduate research students as a part of the MSU solar REU program
   \\
 \end{innerlist}
 
 \end{outerlist}
 
-%\href{http://solar.physics.montana.edu/}{\textbf{Montana State University}}, 
-%Bozeman, Montana, United States\\
-%\href{http://solar.physics.montana.edu/}{\textbf{Solar Physics Group}}
-%\begin{outerlist}
-%\item[] \textit{NSF Summer REU Undergraduate Researcher}%
-%        \hfill \textbf{June 2007 to August 2007}
-%\begin{innerlist}
-%
-%  \item Improved methods to resolve the 180-degree ambiguity in solar vector \mbox{magnetograms}
-%  \item Attempted to apply method to high resolution Hinode magnetograms
-%  \\
-%\end{innerlist}
-%
-%\end{outerlist}
-%
-%
-%\href{http://www.ifa.hawaii.edu/}{\textbf{University of Hawai'i}}, 
-%Honolulu, Hawai'i United States\\
-%\href{http://www.ifa.hawaii.edu/}{\textbf{Institute for Astronomy}}
-%\begin{outerlist}
-%\item[] \textit{NSF Summer REU Undergraduate Researcher}%
-%        \hfill \textbf{May 2006 to August 2006}
-%\begin{innerlist}
-%  \item Analysis of CMEs utilizing SOHO data for Dr. Shadia Habbal and Dr. Huw Morgan
-%  \item Observational experience and interaction with astronomers at Mauna Kea \mbox{observatories} on the IRTF, Caltech CSO, and the UH 88'' \\
-%\end{innerlist}
-%
-%\end{outerlist}
+\section{Teaching Experience}
+\href{https://www.colorado.edu}{\textbf{University of Colorado Boulder}}\\
+\href{https://www.colorado.edu/aps/}{\textbf{Astrophysical and Planetary Sciences}}
+\hfill Boulder, Colorado, United States
+\begin{outerlist}
+\item[] \textit{Instructor}%
+        \hfill \textbf{January 2020 to May 2020}
+\begin{innerlist}
+
+  \item Designed and taught Introduction to the Solar System course
+  \item Integrated planetarium and observatory sessions into the course
+  \item Utilized a Learning Assistant to assist in classroom activities, and to provide an undergraduate student with an active teaching experience
+  \\
+\end{innerlist}
+
+\end{outerlist}
+
+\href{http://www.gatech.edu}{\textbf{Georgia Institute of Technology}}\\
+\href{http://www.physics.gatech.edu}{\textbf{School of Physics}}
+\hfill Atlanta, Georgia, United States
+\begin{outerlist}
+\item[] \textit{Physics I / II Graduate Teaching Assistant}%
+        \hfill \textbf{August 2008 to May 2009}
+\begin{innerlist}
+
+  \item Designed and marked problem sets covering mechanics and electromagnetism
+  \item Engaged students in problem solving methods not directly addressed in lecture
+  \\
+\end{innerlist}
+
+\end{outerlist}
+
+\href{http://georgiasouthern.edu/physics/}{\textbf{Georgia Southern University}}\\
+\href{http://georgiasouthern.edu/physics/}{\textbf{Department of Physics}}
+\hfill Statesboro, Georgia, United States
+\begin{outerlist}
+\item[] \textit{Physics I / II Lab Teaching Assistant}%
+        \hfill \textbf{May 2008 to July 2008}
+\begin{innerlist}
+  \item Maintained lab equipment and helped to integrate the lecture and lab experience
+  \item Graded work assignments and assisted with in-class assignments
+\end{innerlist}
+
+\end{outerlist}
+
+
+\begin{outerlist}
+\item[] \textit{Astronomy Laboratory Instructor}%
+        \hfill \textbf{January 2008 to May 2008}
+\begin{innerlist}
+  \item Engaged students in aspects of theory and observations in astronomy
+  \item Modernized course content and implemented new observational activities
+\end{innerlist}
+
+\end{outerlist}
+
+\begin{outerlist}
+\item[] \textit{Planetarium Lecturer}%
+        \hfill \textbf{January 2008 to May 2008}
+\begin{innerlist}
+  \item Provided free planetarium shows to grade school level groups
+  \item Organized workshop sessions to train grade-school earth science teachers
+  \\
+\end{innerlist}
+
+\end{outerlist}
+
+\href{http://www.physics.gatech.edu/}{\textbf{Georgia Institute of Technology}}\\
+\href{http://www.physics.gatech.edu/}{\textbf{School of Physics}}
+\hfill Atlanta, Georgia, United States
+\begin{outerlist}
+\item[] \textit{Physics II Laboratory Teaching Assistant}%
+        \hfill \textbf{September 2007 to December 2007}
+\begin{innerlist}
+  \item Setup and conducted a physics II lab session
+  \item Instructed students and graded the resulting labwork
+  \\
+\end{innerlist}
+
+\end{outerlist}
 
 \end{document}
